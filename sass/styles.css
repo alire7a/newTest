@@ -1,0 +1,21 @@
+.container, .container2 {
+  height: 40vh;
+  background: rgb(4, 0, 255);
+  box-shadow: 0 0 10px red;
+}
+.container .red, .container2 .red {
+  font-size: 24px;
+}
+.container input, .container2 input {
+  background: green;
+  border-radius: 10px;
+  background-color: red;
+  padding: 10px;
+}
+
+.main {
+  box-shadow: 0 0 10px red;
+}
+.main::before {
+  content: "green";
+}/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,46 @@
+
+@import "./vars";
+@mixin defaultInput($size:10px,$color:red)  {
+    border-radius: $size ;
+    background-color: $color ;
+    padding: 10px;
+}
+
+
+
+.container{
+    height: 40vh;
+    background: $primaryColor;
+    box-shadow: $box-shadow;
+    .red{
+        font-size: 24px;
+
+    }
+    input{
+        background: green;
+        
+        @include defaultInput();
+    }
+
+}
+
+.main {
+
+    @if $primaryColor == red {
+        &::before{
+           content: "red";
+        }
+       }@else{
+           box-shadow: 0 0 10px red;
+           &::before{
+               content: "green";
+            }
+       }
+
+} 
+
+
+.container2{
+ @extend  .container ;
+}
+
