@@ -1,0 +1,152 @@
+.container{
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
+    gap: 0;
+    height: 80%;
+    width: 100%;
+}
+.body .container div{
+    background-color: red;
+}
+div img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.first img ,.fifth img{
+    opacity: 35%;
+}
+.first ,.fifth{
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.arrows {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    color: #e6a900;
+    right: 35%;
+    border: 1px solid #e6a900;
+    padding: 11px 26px;
+    border-radius: 21px;
+}
+.second ,.third ,.fourth{
+    position: relative;
+    z-index: 3;
+}
+.box {
+    position: absolute;
+    z-index: 4;
+    height: 30%;
+    bottom: 10%;
+    left: 10%;
+    width: 80%;
+    backdrop-filter: blur(20px);
+    color: #e9e9e9;
+    display: grid;
+    justify-content: center;
+    grid-template-rows: 1fr 2fr 1fr;
+}
+.money{
+    background-color: #e4ba52;
+}
+.top{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;    
+}
+.text{
+    display: none;
+    color: #e9e9e9;
+}
+button {
+    color: #e4ba52;
+    background-color: aliceblue;
+    border: 1px solid aliceblue;
+    border-radius: 14px;
+    padding: 10px 10px;
+}
+.bottom{
+    display: none;
+}
+.div:hover .text{
+    display: block;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.div:hover .top{
+    border-bottom: 1px solid #e9e9e9;
+    display: flex;
+    justify-content: center;    
+    transition: 0.5s;
+    overflow: hidden;
+}
+.div:hover .box{
+    height: 85%;    
+    width: 80%;
+    overflow: hidden;
+    backdrop-filter: blur(20px);    
+    transition: 0.5s;
+    bottom: 5%;
+}
+.div:hover .bottom{
+    display: flex;    
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;    
+    transition: 0.5s;
+}
+.arrows:hover{
+    background-color: rgb( 230 , 169 , 0 ,0.1);
+}
+button:hover{
+    background-color: #e4ba52;
+    color: aliceblue;
+    border: 1px solid #e4ba52;
+    transition: 0.2s;
+}
+@media only screen and (max-width:200px){
+    .first ,.fifth{
+        display: none;
+    }
+    .box{
+        width: 135px;
+        height: 62px;       
+        position: absolute; 
+    }
+    .second ,.third ,.fourth{
+        grid-column: span 5;
+        position: relative;
+    }
+    .top{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .div:hover .top{
+        display: flex;
+        flex-direction: row;
+    }
+    .money{
+        width: 45px;
+        height: 12px;
+        font-size: 10px;
+    }
+    .text{
+        font-size: 6px;
+        overflow: scroll !important;
+    }
+    button{
+        font-size: 4px;
+        padding: 2px 4px;
+    }
+    .p{
+        font-size: 6px;
+    }
+    span{
+        font-size: 6px;
+    }
+}
